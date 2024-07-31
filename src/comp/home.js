@@ -1,14 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 import Homeproduct from "./home_product";
 
 /* Icon */
-import { FaEye, FaHeart } from "react-icons/fa";
+import {
+  FaEye,
+  FaHeart,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaShoppingCart,
+} from "react-icons/fa";
 
 const Home = () => {
+  // Product categary
+  const [newProduct, setNewProduct] = useState([]);
+
+  // Trending Product
   const [trendingProduct, setTrendingProduct] = useState(Homeproduct);
   // filter of trending product
+
   const filtercate = (x) => {
     const filterproduct = Homeproduct.filter((curElm) => {
       return curElm.type === x;
@@ -18,6 +31,17 @@ const Home = () => {
   // All Trending Product
   const allTrendingProduct = () => {
     setTrendingProduct(Homeproduct);
+  };
+
+  //Product Type
+  useEffect(() => {
+    productcategory();
+  });
+  const productcategory = () => {
+    const newcategory = Homeproduct.filter((x) => {
+      return x.type === "new";
+    });
+    setNewProduct(newcategory);
   };
 
   return (
@@ -74,9 +98,108 @@ const Home = () => {
                     );
                   })}
                 </div>
+                <button className="btn_more">Show More</button>
               </div>
             </div>
-            <div className="right_box"></div>
+            <div className="right_box">
+              <div className="right_container">
+                <div className="testimonial">
+                  <div className="head">
+                    <h3>Our Testimonial</h3>
+                  </div>
+                  <div className="detail">
+                    <div className="img_box">
+                      <img src="image/T1.avif" alt="testmonial" />
+                    </div>
+                    <div className="info">
+                      <h3>stephan robot</h3>
+                      <h4>web designer</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="newsletter">
+                <div className="head">
+                  <h3>Newsletter</h3>
+                </div>
+                <div className="form">
+                  <p>join our malling list</p>
+                  <input type="email" placeholder="E-mail" autoComplete="off" />
+                  <button>Subscribe</button>
+                  <div className="icon_box">
+                    <div className="icon">
+                      <FaFacebookF />
+                    </div>
+                    <div className="icon">
+                      <FaTwitter />
+                    </div>
+                    <div className="icon">
+                      <FaInstagram />
+                    </div>
+                    <div className="icon">
+                      <FaYoutube />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="banners">
+          <div className="container">
+            <div className="left_box">
+              <div className="box">
+                <img src="image/Multi-Banner-1.avif" alt="banner" />
+              </div>
+              <div className="box">
+                <img src="image/Multi-Banner-2.avif" alt="banner" />
+              </div>
+            </div>
+            <div className="right_box">
+              <div className="top">
+                <img src="image/Multi-Banner-3.webp" alt="" />
+                <img src="image/Multi-Banner-4.avif" alt="" />
+              </div>
+              <div className="bottom">
+                <img src="image/Multi-Banner-5.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="product_type">
+          <div className="container">
+            <div className="box">
+              <div className="header">
+                <h2>New Product</h2>
+              </div>
+              {newProduct.map((curElm) => {
+                return (
+                  <>
+                    <div className="productbox">
+                      <div className="img-box">
+                        <img src={curElm.image} alt="" />
+                      </div>
+                      <div className="detail">
+                        <h3>{curElm.Name}</h3>
+                        <p>$ {curElm.price}</p>
+                        <div className="icon">
+                          <button>
+                            <FaEye />
+                          </button>
+                          <button>
+                            <FaHeart />
+                          </button>
+                          <button>
+                            <FaShoppingCart />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
