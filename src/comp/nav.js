@@ -7,7 +7,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { CiLogout } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ search, setSearch, searchproduct }) => {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   return (
     <>
@@ -25,8 +25,13 @@ const Nav = () => {
             <img src="image/logo.webp" alt="logo" />
           </div>
           <div className="search_box">
-            <input type="text" value="" placeholder="searh" />
-            <button>
+            <input
+              type="text"
+              value={search}
+              placeholder="searh"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <button onClick={searchproduct}>
               <AiOutlineSearch />
             </button>
           </div>

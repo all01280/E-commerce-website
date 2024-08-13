@@ -158,7 +158,7 @@
 }
 
 .home .trending .container .left_box .products .container .box .img_box img {
-  width: 190px;
+  width: 100%;
   height: 190px;
   object-fit: cover;
 }
@@ -383,10 +383,12 @@
 
 .home .banners .container .left_box {
   width: 25%;
+  object-fit: cover;
 }
 
 .home .banners .container .right_box {
   width: 55%;
+  object-fit: cover;
 }
 
 .home .banners .container .right_box .top {

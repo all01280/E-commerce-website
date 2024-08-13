@@ -4,7 +4,7 @@ const Homeproduct = [
     Name: "product1",
     price: "26",
     image: "image/p1.webp",
-    cat: "",
+    cat: "tv",
     type: "new",
   },
   {
@@ -12,7 +12,7 @@ const Homeproduct = [
     Name: "product2",
     price: "75",
     image: "image/p2.webp",
-    cat: "",
+    cat: "laptop",
     type: "new",
   },
   {
@@ -20,7 +20,7 @@ const Homeproduct = [
     Name: "product3",
     price: "182",
     image: "image/p3.webp",
-    cat: "",
+    cat: "watch",
     type: "new",
   },
   {
@@ -28,7 +28,7 @@ const Homeproduct = [
     Name: "product4",
     price: "93",
     image: "image/p4.webp",
-    cat: "",
+    cat: "speaker",
     type: "new",
   },
   {
@@ -36,7 +36,7 @@ const Homeproduct = [
     Name: "product5",
     price: "66",
     image: "image/p5.webp",
-    cat: "",
+    cat: "electronics",
     type: "featured",
   },
   {
@@ -44,7 +44,7 @@ const Homeproduct = [
     Name: "product6",
     price: "52",
     image: "image/p6.webp",
-    cat: "",
+    cat: "phone",
     type: "featured",
   },
   {
@@ -52,7 +52,7 @@ const Homeproduct = [
     Name: "product7",
     price: "68",
     image: "image/p7.webp",
-    cat: "",
+    cat: "electronics",
     type: "featured",
   },
   {
@@ -60,7 +60,7 @@ const Homeproduct = [
     Name: "product8",
     price: "71",
     image: "image/p8.webp",
-    cat: "",
+    cat: "speaker",
     type: "featured",
   },
   {
@@ -68,7 +68,7 @@ const Homeproduct = [
     Name: "product9",
     price: "241",
     image: "image/p9.jpg",
-    cat: "",
+    cat: "laptop",
     type: "top",
   },
   {
@@ -76,7 +76,7 @@ const Homeproduct = [
     Name: "product10",
     price: "258",
     image: "image/p10.jpg",
-    cat: "",
+    cat: "headphone",
     type: "top",
   },
   {
@@ -84,7 +84,7 @@ const Homeproduct = [
     Name: "product11",
     price: "179",
     image: "image/p11.jpg",
-    cat: "",
+    cat: "electronics",
     type: "top",
   },
   {
@@ -92,7 +92,7 @@ const Homeproduct = [
     Name: "product12",
     price: "146",
     image: "image/p12.jpg",
-    cat: "",
+    cat: "speaker",
     type: "top",
   },
 ];
