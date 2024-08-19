@@ -94,8 +94,8 @@ const Nav = ({ search, setSearch, searchproduct }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/collection" className="link">
-                  Collection
+                <Link to="/cart" className="link">
+                  Cart
                 </Link>
               </li>
               <li>

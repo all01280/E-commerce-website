@@ -6,6 +6,8 @@ import Footer from "./comp/footer";
 import Homeproduct from "./comp/home_product";
 
 const App = () => {
+  // Add to Cart
+  const [cart, setCart] = useState([]);
   // Shop Page product
   const [shop, setShop] = useState(Homeproduct);
   // Shop Search Filter
@@ -34,6 +36,20 @@ const App = () => {
   const allcatefilter = () => {
     setShop(Homeproduct);
   };
+
+  // Add to Cart
+  const addtocart = (product) => {
+    const exist = cart.find((x) => {
+      return x.id === product.id;
+    });
+    if (exist) {
+      alert("This product is already added in cart");
+    } else {
+      setCart([...cart, { ...product, qty: 1 }]);
+      alert("Added To cart");
+    }
+  };
+  console.log(cart);
   return (
     <>
       <BrowserRouter>
@@ -42,7 +58,14 @@ const App = () => {
           setSearch={setSearch}
           searchproduct={searchproduct}
         ></Nav>
-        <Rout shop={shop} Filter={Filter} allcatefilter={allcatefilter}></Rout>
+        <Rout
+          setCart={setCart}
+          cart={cart}
+          shop={shop}
+          Filter={Filter}
+          allcatefilter={allcatefilter}
+          addtocart={addtocart}
+        ></Rout>
         <Footer></Footer>
       </BrowserRouter>
     </>

@@ -14,7 +14,7 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 
-const Home = () => {
+const Home = ({ addtocart }) => {
   // Product categary
   const [newProduct, setNewProduct] = useState([]);
   const [featuredProduct, setFeaturedProduct] = useState([]);
@@ -106,7 +106,12 @@ const Home = () => {
                           <div className="info">
                             <h3>{curElm.Name}</h3>
                             <p>${curElm.price}</p>
-                            <button className="btn">Add to cart</button>
+                            <button
+                              className="btn"
+                              onClick={() => addtocart(curElm)}
+                            >
+                              Add to cart
+                            </button>
                           </div>
                         </div>
                       </>
@@ -205,7 +210,7 @@ const Home = () => {
                           <button>
                             <FaHeart />
                           </button>
-                          <button>
+                          <button onClick={() => addtocart(curElm)}>
                             <FaShoppingCart />
                           </button>
                         </div>
@@ -236,7 +241,7 @@ const Home = () => {
                           <button>
                             <FaHeart />
                           </button>
-                          <button>
+                          <button onClick={() => addtocart(curElm)}>
                             <FaShoppingCart />
                           </button>
                         </div>
