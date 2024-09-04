@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./shop.css";
 import { FaEye, FaFilter } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 const Shop = ({ shop, Filter, allcatefilter, addtocart }) => {

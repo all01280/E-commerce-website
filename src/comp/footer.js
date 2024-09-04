@@ -1,11 +1,5 @@
 import React from "react";
 import "./footer.css";
-import {
-  FaPiggyBank,
-  FaShippingFast,
-  FaHeadphonesAlt,
-  FaWallet,
-} from "react-icons/fa";
 
 const Footer = () => {
   return (

@@ -5,7 +5,7 @@ import Homeproduct from "./home_product";
 import { AiOutlineClose } from "react-icons/ai";
 
 /* Icon */
-import { FaEye, FaHeart, FaShoppingCart } from "react-icons/fa";
+import { FaEye, FaShoppingCart } from "react-icons/fa";
 
 const Home = ({ addtocart }) => {
   // 顥示產品詳情
