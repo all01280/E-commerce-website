@@ -98,7 +98,10 @@ const Home = ({ addtocart }) => {
       ) : null}
 
       <div className="home">
-        <div className="top_banner">
+        <div
+          className="top_banner"
+          style={{ backgroundImage: `url("/image/slide-1.webp")` }}
+        >
           <div className="contact">
             <h3>silver aluminum</h3>
             <h2>Apple Watch</h2>
